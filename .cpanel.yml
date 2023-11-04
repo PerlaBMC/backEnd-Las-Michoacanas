@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/src/
+    - /bin/cp index.js $DEPLOYPATH
