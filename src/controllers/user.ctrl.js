@@ -24,7 +24,7 @@ const crearUsuario = async (req, res) => {
 
     const nuevoUsuario = {
         user_name,
-        email, 
+        email,   
         phoneNumber,
         store
     }
