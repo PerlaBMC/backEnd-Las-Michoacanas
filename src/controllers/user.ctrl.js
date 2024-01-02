@@ -20,12 +20,13 @@ try {
 
 const crearUsuario = async (req, res) => {
  try {
-    const {user_name, email, phoneNumber} = req.body
+    const {user_name, email, phoneNumber, store} = req.body
 
     const nuevoUsuario = {
         user_name,
         email, 
         phoneNumber,
+        store
     }
 
     const newUser = await User (nuevoUsuario).save()
@@ -46,12 +47,13 @@ const crearUsuario = async (req, res) => {
 const actualizarUsuario = async (req, res) =>{
 try {
     const {id} = req.params;
-    const {user_name, email, phoneNumber} = req.body;
+    const {user_name, email, phoneNumber, store} = req.body;
 
     const informacionNueva = {
         user_name, 
         email, 
-        phoneNumber
+        phoneNumber,
+        store
     }
 
     const usuarioActualizado = await User.findByIdAndUpdate (id,informacionNueva, {new:true})

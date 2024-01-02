@@ -15,6 +15,10 @@ const userSchema = Schema ({
         type: Number
     },
 
+    store: {
+        type: String
+    }
+
 })
 
 userSchema.methods.toJSON = function () {
@@ -23,4 +27,4 @@ userSchema.methods.toJSON = function () {
     return rest;
 };
 
-module.exports = model ("user", userSchema, "users");
+module.exports = model ("user", userSchema, "users"); 
